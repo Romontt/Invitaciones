@@ -11,26 +11,32 @@
         body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
         .font-brand { font-family: 'Montserrat', sans-serif; }
         .bg-soft { background: linear-gradient(180deg, #FFFFFF 0%, #F1F5F9 100%); }
+        /* Animación suave para los logos al pasar el mouse */
+        .logo-hover { transition: transform 0.3s ease; }
+        .logo-hover:hover { transform: scale(1.05); }
     </style>
 </head>
 <body class="bg-white text-[#37474F]">
 
     <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
-        <div class="flex justify-between items-center p-6 max-w-7xl mx-auto">
-          <a href="#" class="flex items-center">
-    <img src="img/logo-dark.png" alt="Nivora Logo" class="h-10 md:h-12 w-auto object-contain">
-</a>
+        <div class="flex justify-between items-center p-4 md:p-6 max-w-7xl mx-auto">
+            <a href="#" class="flex items-center">
+                <img src="img/logo-dark.png" alt="Nivora Logo" class="h-12 md:h-16 w-auto object-contain logo-hover">
+            </a>
             
             <div class="hidden md:flex space-x-8 font-medium uppercase text-[10px] tracking-[0.2em]">
                 <a href="#beneficios" class="hover:text-[#D4AF37] transition font-bold">Beneficios</a>
                 <a href="#eventos" class="hover:text-[#D4AF37] transition font-bold">Eventos</a>
             </div>
-            <a href="https://wa.me/506TUNUMERO" class="bg-[#37474F] text-white px-6 py-2 rounded-full font-semibold text-[10px] tracking-widest hover:bg-[#D4AF37] transition duration-300 uppercase">Crear Ahora</a>
+            
+            <a href="https://wa.me/506TUNUMERO" class="bg-[#37474F] text-white px-6 py-2 rounded-full font-semibold text-[10px] tracking-widest hover:bg-[#D4AF37] transition duration-300 uppercase shadow-md">
+                Crear Ahora
+            </a>
         </div>
     </nav>
 
-    <header class="bg-soft py-20 px-6">
-        <div class="max-w-7xl mx-auto text-center md:text-left flex flex-col md:flex-row items-center">
+    <header class="bg-soft py-16 md:py-24 px-6">
+        <div class="max-w-7xl mx-auto text-center md:text-left flex flex-col md:flex-row items-center gap-12">
             <div class="md:w-1/2">
                 <span class="inline-block px-3 py-1 mb-4 text-[10px] font-bold tracking-[0.3em] text-[#D4AF37] uppercase bg-[#D4AF37]/10 rounded-full">Experiencia Digital</span>
                 <h1 class="font-brand text-5xl md:text-7xl font-bold leading-tight mb-6 uppercase tracking-tighter">
@@ -45,13 +51,14 @@
                 </div>
             </div>
             
-            <div class="md:w-1/2 mt-12 md:mt-0 flex justify-center">
-                <div class="relative w-64 h-[500px] bg-[#37474F] rounded-[3rem] border-[8px] border-[#37474F] shadow-2xl overflow-hidden ring-1 ring-gray-100">
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative w-64 h-[520px] bg-[#37474F] rounded-[3rem] border-[8px] border-[#37474F] shadow-2xl overflow-hidden ring-4 ring-gray-100/50">
                     <div class="absolute top-0 w-full h-full bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80&w=500');">
                         <div class="absolute inset-0 bg-[#37474F]/40 flex items-center justify-center text-center p-4">
-                            <div>
-                                <img src="img/isotipo.png" alt="Nivora Isotipo" class="h-12 mx-auto mb-4 brightness-0 invert opacity-80">
-                                <p class="text-white font-brand text-2xl italic tracking-widest">Nuestra Boda</p>
+                            <div class="flex flex-col items-center">
+                                <img src="img/isotipo.png" alt="Nivora Isotipo" class="h-20 w-auto mb-6 brightness-0 invert opacity-95 drop-shadow-lg">
+                                <p class="text-white font-brand text-2xl italic tracking-[0.2em] drop-shadow-md">Nuestra Boda</p>
+                                <div class="mt-8 h-[1px] w-12 bg-white/50"></div>
                             </div>
                         </div>
                     </div>
@@ -65,21 +72,21 @@
             <h2 class="font-brand text-2xl font-bold mb-16 uppercase tracking-[0.3em]">La esencia de Nivora</h2>
             <div class="grid md:grid-cols-3 gap-12">
                 <div class="group">
-                    <div class="w-16 h-16 mx-auto mb-6 bg-white rounded-full flex items-center justify-center shadow-sm group-hover:shadow-md transition">
+                    <div class="w-16 h-16 mx-auto mb-6 bg-white rounded-full flex items-center justify-center shadow-sm group-hover:shadow-md transition-all group-hover:-translate-y-1">
                         <span class="text-2xl">💬</span>
                     </div>
                     <h3 class="font-brand font-bold text-sm mb-3 uppercase tracking-widest">Confirmación</h3>
                     <p class="text-gray-500 text-xs font-light leading-relaxed">Gestión de invitados en tiempo real vía WhatsApp.</p>
                 </div>
                 <div class="group">
-                    <div class="w-16 h-16 mx-auto mb-6 bg-white rounded-full flex items-center justify-center shadow-sm group-hover:shadow-md transition">
+                    <div class="w-16 h-16 mx-auto mb-6 bg-white rounded-full flex items-center justify-center shadow-sm group-hover:shadow-md transition-all group-hover:-translate-y-1">
                         <span class="text-2xl">📍</span>
                     </div>
                     <h3 class="font-brand font-bold text-sm mb-3 uppercase tracking-widest">Ubicación</h3>
                     <p class="text-gray-500 text-xs font-light leading-relaxed">Integración con Google Maps y Waze para tus invitados.</p>
                 </div>
                 <div class="group">
-                    <div class="w-16 h-16 mx-auto mb-6 bg-white rounded-full flex items-center justify-center shadow-sm group-hover:shadow-md transition">
+                    <div class="w-16 h-16 mx-auto mb-6 bg-white rounded-full flex items-center justify-center shadow-sm group-hover:shadow-md transition-all group-hover:-translate-y-1">
                         <span class="text-2xl">🌱</span>
                     </div>
                     <h3 class="font-brand font-bold text-sm mb-3 uppercase tracking-widest">Sostenible</h3>
@@ -92,12 +99,12 @@
     <section id="eventos" class="py-24 bg-white px-6">
         <div class="max-w-7xl mx-auto text-center">
             <h2 class="font-brand text-3xl font-bold mb-4 uppercase tracking-[0.2em]">Selecciona tu evento</h2>
-            <p class="text-gray-400 mb-16 max-w-2xl mx-auto font-light italic text-sm font-brand tracking-widest text-center">Personalización exclusiva para cada momento.</p>
+            <p class="text-gray-400 mb-16 max-w-2xl mx-auto font-light italic text-sm font-brand tracking-widest">Personalización exclusiva para cada momento.</p>
             
             <div class="grid md:grid-cols-3 gap-10">
-                <div class="relative overflow-hidden rounded-2xl group cursor-pointer border border-gray-100 shadow-sm">
+                <div class="relative overflow-hidden rounded-2xl group border border-gray-100 shadow-sm">
                     <div class="h-96 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=500');"></div>
-                    <div class="absolute inset-0 bg-gradient-to-t from-[#37474F] via-transparent to-transparent opacity-80"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#37474F] via-[#37474F]/20 to-transparent opacity-90"></div>
                     <div class="absolute inset-0 flex flex-col justify-end p-8 text-left">
                         <h3 class="text-white text-xl font-brand font-bold tracking-widest uppercase mb-2">Boda</h3>
                         <p class="text-gray-300 text-[10px] uppercase tracking-widest mb-4">Gris Antracita & Dorado</p>
@@ -105,9 +112,9 @@
                     </div>
                 </div>
 
-                <div class="relative overflow-hidden rounded-2xl group cursor-pointer border border-gray-100 shadow-sm">
+                <div class="relative overflow-hidden rounded-2xl group border border-gray-100 shadow-sm">
                     <div class="h-96 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('https://images.unsplash.com/photo-1530103043960-ef38714abb15?q=80&w=500');"></div>
-                    <div class="absolute inset-0 bg-gradient-to-t from-[#37474F] via-transparent to-transparent opacity-80"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#37474F] via-[#37474F]/20 to-transparent opacity-90"></div>
                     <div class="absolute inset-0 flex flex-col justify-end p-8 text-left">
                         <h3 class="text-white text-xl font-brand font-bold tracking-widest uppercase mb-2">15 Años</h3>
                         <p class="text-gray-300 text-[10px] uppercase tracking-widest mb-4">Moderno & Vibrante</p>
@@ -115,9 +122,9 @@
                     </div>
                 </div>
 
-                <div class="relative overflow-hidden rounded-2xl group cursor-pointer border border-gray-100 shadow-sm">
+                <div class="relative overflow-hidden rounded-2xl group border border-gray-100 shadow-sm">
                     <div class="h-96 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('https://images.unsplash.com/photo-1519689680058-324335c77eba?q=80&w=500');"></div>
-                    <div class="absolute inset-0 bg-gradient-to-t from-[#37474F] via-transparent to-transparent opacity-80"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#37474F] via-[#37474F]/20 to-transparent opacity-90"></div>
                     <div class="absolute inset-0 flex flex-col justify-end p-8 text-left">
                         <h3 class="text-white text-xl font-brand font-bold tracking-widest uppercase mb-2">Baby Shower</h3>
                         <p class="text-gray-300 text-[10px] uppercase tracking-widest mb-4">Rosa Pastel & Bruma</p>
@@ -128,13 +135,14 @@
         </div>
     </section>
 
-    <footer class="py-16 text-center bg-[#37474F] text-white">
-     <img src="img/logo-light.png" alt="Nivora Logo Light" class="h-12 md:h-14 mx-auto mb-6 opacity-90">
-        <p class="text-[10px] uppercase tracking-[0.3em] font-light text-gray-400">
+    <footer class="py-20 text-center bg-[#37474F] text-white">
+        <div class="mb-8">
+            <img src="img/logo-light.png" alt="Nivora Logo Light" class="h-16 md:h-20 mx-auto opacity-100">
+        </div>
+        <p class="text-[10px] uppercase tracking-[0.4em] font-light text-gray-400">
             &copy; 2026 NIVORA. Elevando tus momentos especiales.
         </p>
     </footer>
 
 </body>
 </html>
-
