@@ -9,7 +9,6 @@
     <style>
         body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
         .font-brand { font-family: 'Montserrat', sans-serif; }
-        .tracking-premium { tracking-widest; } /* Este se aplica manualmente en las clases */
     </style>
 </head>
 <body class="bg-white text-[#37474F]">
@@ -17,9 +16,8 @@
     <nav class="flex justify-between items-center p-6 max-w-7xl mx-auto">
         <div class="text-2xl font-bold font-brand tracking-[0.2em] text-[#37474F]">NIVORA</div>
         <div class="hidden md:flex space-x-8 font-medium uppercase text-xs tracking-widest">
-            <a href="#beneficios" class="hover:text-[#D4AF37] transition">Beneficios</a>
-            <a href="#modelos" class="hover:text-[#D4AF37] transition">Modelos</a>
-            <a href="#precios" class="hover:text-[#D4AF37] transition">Precios</a>
+            <a href="#beneficios" class="hover:text-[#D4AF37] transition font-bold">Beneficios</a>
+            <a href="#eventos" class="hover:text-[#D4AF37] transition font-bold">Eventos</a>
         </div>
         <a href="https://wa.me/506TUNUMERO?text=Hola%20Nivora!%20Quiero%20crear%20una%20invitación%20digital" class="bg-[#37474F] text-white px-6 py-2 rounded-full font-semibold text-xs tracking-widest hover:bg-[#D4AF37] transition duration-300">CREAR AHORA</a>
     </nav>
@@ -33,7 +31,7 @@
                 Crea invitaciones digitales interactivas, elegantes y ecológicas. Confirmación por WhatsApp, mapas y cuenta regresiva en un solo lugar bajo el sello de <span class="font-semibold">Nivora</span>.
             </p>
             <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
-                <a href="#modelos" class="bg-[#D4AF37] text-white px-8 py-4 rounded-xl text-sm font-bold tracking-widest uppercase shadow-lg hover:shadow-yellow-100 transition text-center">Ver Catálogo</a>
+                <a href="#eventos" class="bg-[#D4AF37] text-white px-8 py-4 rounded-xl text-sm font-bold tracking-widest uppercase shadow-lg hover:shadow-yellow-100 transition text-center">Ver Eventos</a>
                 <a href="https://wa.me/506TUNUMERO?text=Hola%20Nivora!%20Me%20gustaría%20recibir%20más%20información" class="border-2 border-gray-100 text-[#37474F] px-8 py-4 rounded-xl text-sm font-bold tracking-widest uppercase hover:bg-gray-50 transition text-center">Más información</a>
             </div>
         </div>
@@ -71,48 +69,48 @@
         </div>
     </section>
 
-    <section id="modelos" class="py-20 bg-white px-6">
+    <section id="eventos" class="py-20 bg-white px-6">
         <div class="max-w-7xl mx-auto text-center">
-            <h2 class="font-brand text-4xl font-bold mb-4 uppercase tracking-widest">Elige tu estilo</h2>
-            <p class="text-gray-500 mb-12 max-w-2xl mx-auto font-light italic">Diseños pensados para emocionar a tus invitados desde el primer segundo.</p>
+            <h2 class="font-brand text-4xl font-bold mb-4 uppercase tracking-widest">Selecciona tu evento</h2>
+            <p class="text-gray-500 mb-12 max-w-2xl mx-auto font-light italic">Haz clic en tu tipo de celebración para ver los detalles y funciones especiales.</p>
             
             <div class="grid md:grid-cols-3 gap-10">
                 <div class="group relative overflow-hidden rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100">
                     <div class="h-80 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" style="background-image: url('https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=500');"></div>
                     <div class="absolute inset-0 bg-gradient-to-t from-[#37474F]/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 text-left">
-                        <h3 class="text-white text-xl font-brand font-bold tracking-widest uppercase">Elegancia Real</h3>
-                        <p class="text-gray-200 text-sm mb-4">Perfecto para bodas clásicas y sofisticadas.</p>
-                        <a href="/bodas" class="bg-[#D4AF37] text-white py-2 px-4 rounded-lg font-bold text-xs uppercase tracking-widest text-center">Ver Detalles</a>
+                        <h3 class="text-white text-xl font-brand font-bold tracking-widest uppercase">Boda</h3>
+                        <p class="text-gray-200 text-sm mb-4">Elegancia y sofisticación para tu gran día.</p>
+                        <a href="/bodas" class="bg-[#D4AF37] text-white py-2 px-4 rounded-lg font-bold text-xs uppercase tracking-widest text-center border border-[#D4AF37] hover:bg-transparent transition">Explorar</a>
                     </div>
-                    <div class="p-6 bg-white group-hover:hidden">
-                        <h3 class="font-brand text-lg font-bold uppercase tracking-widest">Boda Elegante</h3>
-                        <p class="text-gray-500 text-sm font-light">Rosa Pastel & Dorado Arena.</p>
+                    <div class="p-6 bg-white group-hover:hidden text-center">
+                        <h3 class="font-brand text-lg font-bold uppercase tracking-widest text-[#37474F]">Bodas</h3>
+                        <p class="text-gray-500 text-sm font-light italic">Estilo Premium</p>
                     </div>
                 </div>
 
                 <div class="group relative overflow-hidden rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100">
                     <div class="h-80 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" style="background-image: url('https://images.unsplash.com/photo-1530103043960-ef38714abb15?q=80&w=500');"></div>
                     <div class="absolute inset-0 bg-gradient-to-t from-[#37474F]/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 text-left">
-                        <h3 class="text-white text-xl font-brand font-bold tracking-widest uppercase">Party Night</h3>
-                        <p class="text-gray-200 text-sm mb-4">Neon, música y mucha energía.</p>
-                        <a href="/15-anos" class="bg-[#D4AF37] text-white py-2 px-4 rounded-lg font-bold text-xs uppercase tracking-widest text-center">Ver Detalles</a>
+                        <h3 class="text-white text-xl font-brand font-bold tracking-widest uppercase">XV Años</h3>
+                        <p class="text-gray-200 text-sm mb-4">Modernidad y energía en tu invitación.</p>
+                        <a href="/15-anos" class="bg-[#D4AF37] text-white py-2 px-4 rounded-lg font-bold text-xs uppercase tracking-widest text-center border border-[#D4AF37] hover:bg-transparent transition">Explorar</a>
                     </div>
-                    <div class="p-6 bg-white group-hover:hidden">
-                        <h3 class="font-brand text-lg font-bold uppercase tracking-widest">Mis 15 Años</h3>
-                        <p class="text-gray-500 text-sm font-light">Moderno, dinámico y juvenil.</p>
+                    <div class="p-6 bg-white group-hover:hidden text-center">
+                        <h3 class="font-brand text-lg font-bold uppercase tracking-widest text-[#37474F]">15 Años</h3>
+                        <p class="text-gray-500 text-sm font-light italic">Estilo Juvenil</p>
                     </div>
                 </div>
 
                 <div class="group relative overflow-hidden rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100">
                     <div class="h-80 bg-cover bg-center transition-transform duration-500 group-hover:scale-110" style="background-image: url('https://images.unsplash.com/photo-1519689680058-324335c77eba?q=80&w=500');"></div>
                     <div class="absolute inset-0 bg-gradient-to-t from-[#37474F]/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6 text-left">
-                        <h3 class="text-white text-xl font-brand font-bold tracking-widest uppercase">Dulce Espera</h3>
-                        <p class="text-gray-200 text-sm mb-4">Colores pastel y ternura total.</p>
-                        <a href="/baby-shower" class="bg-[#D4AF37] text-white py-2 px-4 rounded-lg font-bold text-xs uppercase tracking-widest text-center">Ver Detalles</a>
+                        <h3 class="text-white text-xl font-brand font-bold tracking-widest uppercase text-center">Baby Shower</h3>
+                        <p class="text-gray-200 text-sm mb-4 text-center">Delicadeza para dar la bienvenida.</p>
+                        <a href="/baby-shower" class="bg-[#D4AF37] text-white py-2 px-4 rounded-lg font-bold text-xs uppercase tracking-widest text-center border border-[#D4AF37] hover:bg-transparent transition">Explorar</a>
                     </div>
-                    <div class="p-6 bg-white group-hover:hidden">
-                        <h3 class="font-brand text-lg font-bold uppercase tracking-widest text-center">Baby Shower</h3>
-                        <p class="text-gray-500 text-sm font-light">Estilo minimalista y tierno.</p>
+                    <div class="p-6 bg-white group-hover:hidden text-center">
+                        <h3 class="font-brand text-lg font-bold uppercase tracking-widest text-[#37474F]">Baby Shower</h3>
+                        <p class="text-gray-500 text-sm font-light italic">Estilo Minimal</p>
                     </div>
                 </div>
             </div>
@@ -120,7 +118,7 @@
     </section>
 
     <footer class="py-10 text-center text-gray-400 border-t border-gray-100">
-        <p class="text-xs uppercase tracking-[0.3em] font-brand">&copy; 2026 NIVORA. Todos los derechos reservados.</p>
+        <p class="text-xs uppercase tracking-[0.3em] font-brand font-bold">&copy; 2026 NIVORA. Todos los derechos reservados.</p>
     </footer>
 </body>
 </html>
