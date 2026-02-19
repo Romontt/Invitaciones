@@ -10,11 +10,31 @@
     <style>
         body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
         .font-brand { font-family: 'Montserrat', sans-serif; }
-        .bg-soft { background: linear-gradient(180deg, #FFFFFF 0%, #F1F5F9 100%); }
+        
+        /* Animación de fondo suave */
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .bg-soft-animated { 
+            background: linear-gradient(-45deg, #FFFFFF, #F8FAFC, #F1F5F9, #FFFFFF);
+            background-size: 400% 400%;
+            animation: gradientMove 15s ease infinite;
+        }
+
+        /* Efecto de flotación para el mockup */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        .float-animation { animation: float 6s ease-in-out infinite; }
+
         .logo-hover { transition: transform 0.3s ease; }
         .logo-hover:hover { transform: scale(1.05); }
         
-        /* Estilo para el menú móvil */
         #mobile-menu {
             transition: all 0.3s ease-in-out;
             max-height: 0;
@@ -36,7 +56,6 @@
                 </a>
                 
                 <div class="hidden md:flex space-x-8 font-medium uppercase text-[10px] tracking-[0.2em]">
-                    <a href="#beneficios" class="hover:text-[#D4AF37] transition font-bold">Beneficios</a>
                     <a href="#proceso" class="hover:text-[#D4AF37] transition font-bold">Cómo funciona</a>
                     <a href="#eventos" class="hover:text-[#D4AF37] transition font-bold">Eventos</a>
                     <a href="#faq" class="hover:text-[#D4AF37] transition font-bold">FAQ</a>
@@ -55,7 +74,6 @@
             </div>
 
             <div id="mobile-menu" class="md:hidden flex flex-col space-y-4 text-center font-bold uppercase text-[10px] tracking-widest border-t border-gray-50 invisible opacity-0 transition-all duration-300">
-                <a href="#beneficios" class="py-2 hover:text-[#D4AF37]">Beneficios</a>
                 <a href="#proceso" class="py-2 hover:text-[#D4AF37]">Cómo funciona</a>
                 <a href="#eventos" class="py-2 hover:text-[#D4AF37]">Eventos</a>
                 <a href="#faq" class="py-2 hover:text-[#D4AF37]">FAQ</a>
@@ -64,7 +82,7 @@
         </div>
     </nav>
 
-    <header class="bg-soft py-16 md:py-24 px-6">
+    <header class="bg-soft-animated py-16 md:py-24 px-6 overflow-hidden">
         <div class="max-w-7xl mx-auto text-center md:text-left flex flex-col md:flex-row items-center gap-12">
             <div class="md:w-1/2">
                 <span class="inline-block px-3 py-1 mb-4 text-[10px] font-bold tracking-[0.3em] text-[#D4AF37] uppercase bg-[#D4AF37]/10 rounded-full">Experiencia Digital</span>
@@ -80,7 +98,7 @@
                 </div>
             </div>
             
-            <div class="md:w-1/2 flex justify-center">
+            <div class="md:w-1/2 flex justify-center float-animation">
                 <div class="relative w-64 h-[520px] bg-[#37474F] rounded-[3rem] border-[8px] border-[#37474F] shadow-2xl overflow-hidden ring-4 ring-gray-100/50">
                     <div class="absolute top-0 w-full h-full bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&q=80&w=500');">
                         <div class="absolute inset-0 bg-[#37474F]/40 flex items-center justify-center text-center p-4">
@@ -96,6 +114,27 @@
         </div>
     </header>
 
+    <section class="py-20 bg-white px-6 border-y border-gray-50">
+        <div class="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div class="group">
+                <p class="font-brand text-[10px] tracking-[0.2em] font-bold uppercase mb-2 group-hover:text-[#D4AF37] transition">Música</p>
+                <p class="text-gray-400 text-[9px] uppercase tracking-widest">Ambiente Inmersivo</p>
+            </div>
+            <div class="group">
+                <p class="font-brand text-[10px] tracking-[0.2em] font-bold uppercase mb-2 group-hover:text-[#D4AF37] transition">GPS</p>
+                <p class="text-gray-400 text-[9px] uppercase tracking-widest">Waze & Google Maps</p>
+            </div>
+            <div class="group">
+                <p class="font-brand text-[10px] tracking-[0.2em] font-bold uppercase mb-2 group-hover:text-[#D4AF37] transition">RSVP</p>
+                <p class="text-gray-400 text-[9px] uppercase tracking-widest">Confirmación Instantánea</p>
+            </div>
+            <div class="group">
+                <p class="font-brand text-[10px] tracking-[0.2em] font-bold uppercase mb-2 group-hover:text-[#D4AF37] transition">Cloud</p>
+                <p class="text-gray-400 text-[9px] uppercase tracking-widest">Acceso Ilimitado</p>
+            </div>
+        </div>
+    </section>
+
     <section id="proceso" class="py-24 bg-white px-6">
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16">
@@ -106,17 +145,17 @@
                 <div class="text-center p-8 bg-gray-50 rounded-2xl hover:shadow-xl transition duration-300">
                     <div class="text-3xl mb-6">✨</div>
                     <h3 class="font-brand font-bold text-sm uppercase mb-4 tracking-widest">1. Eliges tu estilo</h3>
-                    <p class="text-gray-500 text-xs font-light">Selecciona la temática de tu evento. Contamos con diseños exclusivos para Bodas, 15 Años y Baby Showers.</p>
+                    <p class="text-gray-500 text-xs font-light">Selecciona la temática de tu evento. Diseños exclusivos y personalizables.</p>
                 </div>
                 <div class="text-center p-8 bg-gray-50 rounded-2xl hover:shadow-xl transition duration-300 border-y-2 border-[#D4AF37]/20">
                     <div class="text-3xl mb-6">🖋️</div>
                     <h3 class="font-brand font-bold text-sm uppercase mb-4 tracking-widest">2. Personalizamos</h3>
-                    <p class="text-gray-500 text-xs font-light">Envíanos tus datos, fotos y ubicaciones. Nosotros nos encargamos de que cada detalle luzca perfecto.</p>
+                    <p class="text-gray-500 text-xs font-light">Nos envías tus datos y nosotros creamos una experiencia digital impecable.</p>
                 </div>
                 <div class="text-center p-8 bg-gray-50 rounded-2xl hover:shadow-xl transition duration-300">
                     <div class="text-3xl mb-6">📱</div>
                     <h3 class="font-brand font-bold text-sm uppercase mb-4 tracking-widest">3. Compartes</h3>
-                    <p class="text-gray-500 text-xs font-light">Recibes un link exclusivo para enviar por WhatsApp o redes sociales. ¡Tus invitados ya pueden confirmar!</p>
+                    <p class="text-gray-500 text-xs font-light">Link exclusivo listo para enviar por WhatsApp a todos tus invitados.</p>
                 </div>
             </div>
         </div>
@@ -125,7 +164,7 @@
     <section id="eventos" class="py-24 bg-[#F8FAFC] px-6">
         <div class="max-w-7xl mx-auto text-center">
             <h2 class="font-brand text-3xl font-bold mb-4 uppercase tracking-[0.2em]">Selecciona tu evento</h2>
-            <p class="text-gray-400 mb-16 max-w-2xl mx-auto font-light italic text-sm font-brand tracking-widest">Personalización exclusiva para cada momento.</p>
+            <p class="text-gray-400 mb-16 max-w-2xl mx-auto font-light italic text-sm font-brand tracking-widest text-center">Personalización exclusiva para cada momento.</p>
             <div class="grid md:grid-cols-3 gap-10">
                 <div class="relative overflow-hidden rounded-2xl group border border-gray-100 shadow-sm h-[450px]">
                     <div class="h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110" style="background-image: url('https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=500');"></div>
@@ -155,33 +194,33 @@
         </div>
     </section>
 
-    <section id="faq" class="py-24 bg-white px-6">
+    <section class="py-24 bg-white text-center px-6 overflow-hidden">
+        <div class="max-w-3xl mx-auto">
+            <span class="text-[#D4AF37] text-2xl mb-6 block">✨</span>
+            <h2 class="font-brand text-2xl md:text-3xl font-light italic tracking-tight text-[#37474F] leading-tight px-4">
+                "La elegancia no es hacerse notar, sino ser recordado."
+            </h2>
+            <div class="mt-8 h-[1px] w-20 bg-[#D4AF37]/30 mx-auto"></div>
+        </div>
+    </section>
+
+    <section id="faq" class="py-24 bg-gray-50 px-6">
         <div class="max-w-3xl mx-auto">
             <div class="text-center mb-16">
                 <h2 class="font-brand text-2xl font-bold uppercase tracking-[0.3em]">Preguntas Frecuentes</h2>
-                <p class="text-gray-400 text-[10px] uppercase tracking-widest mt-2">Todo lo que necesitas saber</p>
             </div>
-            
             <div class="space-y-6">
-                <div class="border-b border-gray-100 pb-6">
+                <div class="border-b border-gray-200 pb-6">
                     <h4 class="font-brand font-bold text-xs uppercase tracking-widest mb-3 flex items-center">
-                        <span class="text-[#D4AF37] mr-3">01</span> ¿Cómo reciben la invitación mis invitados?
+                        <span class="text-[#D4AF37] mr-3">01</span> ¿Cómo reciben la invitación?
                     </h4>
-                    <p class="text-gray-500 text-xs font-light leading-relaxed pl-8">Recibirás un enlace (URL) personalizado que podrás enviar por WhatsApp, Instagram, correo o cualquier red social de forma ilimitada.</p>
+                    <p class="text-gray-500 text-xs font-light leading-relaxed pl-8">Vía enlace personalizado para WhatsApp o redes sociales.</p>
                 </div>
-
-                <div class="border-b border-gray-100 pb-6">
+                <div class="border-b border-gray-200 pb-6">
                     <h4 class="font-brand font-bold text-xs uppercase tracking-widest mb-3 flex items-center">
-                        <span class="text-[#D4AF37] mr-3">02</span> ¿Es compatible con todos los celulares?
+                        <span class="text-[#D4AF37] mr-3">02</span> ¿Es compatible con móviles?
                     </h4>
-                    <p class="text-gray-500 text-xs font-light leading-relaxed pl-8">Sí, nuestras invitaciones son "Responsive Luxe", diseñadas para verse impecables tanto en iPhone como en Android y computadoras.</p>
-                </div>
-
-                <div class="border-b border-gray-100 pb-6">
-                    <h4 class="font-brand font-bold text-xs uppercase tracking-widest mb-3 flex items-center">
-                        <span class="text-[#D4AF37] mr-3">03</span> ¿Cómo funciona la confirmación de asistencia?
-                    </h4>
-                    <p class="text-gray-500 text-xs font-light leading-relaxed pl-8">La invitación incluye un botón directo a tu WhatsApp con un mensaje pre-llenado, o un formulario que te envía los datos de tus invitados al instante.</p>
+                    <p class="text-gray-500 text-xs font-light leading-relaxed pl-8">Totalmente, optimizado para una experiencia fluida en cualquier dispositivo.</p>
                 </div>
             </div>
         </div>
@@ -206,7 +245,6 @@
             mobileMenu.classList.toggle('opacity-0');
         });
 
-        // Cerrar menú al hacer clic en un enlace
         document.querySelectorAll('#mobile-menu a').forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.remove('open', 'invisible', 'opacity-0');
